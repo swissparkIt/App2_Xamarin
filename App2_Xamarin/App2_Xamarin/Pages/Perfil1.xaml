@@ -3,10 +3,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App2_Xamarin.Pages.Perfil1">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Spacing="0">
+            <RelativeLayout VerticalOptions="Start" HeightRequest="300">
+                <Image Source="Fundo.png"
+                       RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                       ></Image>
+                <Image Source="Perfil.png"
+                       x:Name="Perfil"
+                       WidthRequest="120"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-60}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.2}"
+                       ></Image>
+                <Label Text="Miguel de Icaza"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Perfil, Property=X, Factor=1}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Perfil, Property=Y, Factor=1, Constant=180}"
+                       ></Label>
+            </RelativeLayout>
+            <Grid BackgroundColor="#0D1F2D" HeightRequest="120">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Column="0" Grid.Row="0" HorizontalOptions="CenterAndExpand">
+                    <Label Text="18" TextColor="White" FontSize="32"></Label>
+                    <Label Text="anos" TextColor="White" FontSize="12" HorizontalTextAlignment="Center"></Label>
+                </StackLayout>
+                <StackLayout Grid.Column="1" Grid.Row="0" HorizontalOptions="CenterAndExpand">
+                    <Label Text="15/08/1986" TextColor="White" FontSize="32"></Label>
+                    <Label Text="nasceu" TextColor="White" FontSize="12" HorizontalTextAlignment="Center"></Label>
+                </StackLayout>
+            </Grid>
+            <StackLayout Padding="30" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Label Text="Texto de exemplo, bla bla bla, para ver se fica legal na tela da forma que será apresentada, mais algumas 
+                       letras para encher linguiça... achoq eu já está bom."></Label>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

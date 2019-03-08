@@ -9,16 +9,20 @@
                 <StackLayout BackgroundColor="#FFC926" Padding="50">
                     <Image Source="logo" HorizontalOptions="Center" VerticalOptions="Center"></Image>
                 </StackLayout>
-                <StackLayout>
-                    <Button Text="Miguel de Icaza" FontSize="28" BackgroundColor="Transparent" Clicked="GoPagPerfil1"></Button>
-                    <Button Text="Joseph Hill" FontSize="28" BackgroundColor="Transparent"></Button>
-                    <Button Text="Nat Friedman" FontSize="28" BackgroundColor="Transparent"></Button>
-                    <Button Text="Sobre a Xamarin" FontSize="28" BackgroundColor="Transparent" Clicked="GoPagXamarin"></Button>
+                <StackLayout Spacing="50">
+                    <Button Text="Miguel de Icaza" FontSize="28" TextColor="white" BackgroundColor="Transparent" Clicked="GoPagPerfil1"></Button>
+                    <Button Text="Joseph Hill" FontSize="28" TextColor="white" BackgroundColor="Transparent"></Button>
+                    <Button Text="Nat Friedman" FontSize="28" TextColor="white" BackgroundColor="Transparent"></Button>
+                    <Button Text="Sobre a Xamarin" FontSize="28" TextColor="white" BackgroundColor="Transparent" Clicked="GoPagXamarin"></Button>
                 </StackLayout>
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
     <MasterDetailPage.Detail>
-        <pag:Perfil1></pag:Perfil1>
+        <NavigationPage>
+            <x:Arguments>
+                <pag:Perfil1></pag:Perfil1>
+            </x:Arguments>
+        </NavigationPage>
     </MasterDetailPage.Detail>
 </MasterDetailPage>
