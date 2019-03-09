@@ -14,12 +14,14 @@ namespace App2_Xamarin.Master
 
         private void GoPagPerfil1(object sender, EventArgs args)
         {
-            Navigation.PushAsync(new Pages.Perfil1());
+            //Navigation.PushAsync(new Pages.Perfil1());
+            Detail = new Pages.Perfil1();
         }
 
         private void GoPagXamarin(object sender, EventArgs args)
         {
-            Navigation.PushAsync(new Pages.Xamarin());
+            //Navigation.PushAsync(new Pages.Xamarin());
+            Detail = new Pages.Xamarin();
         }
 
     }

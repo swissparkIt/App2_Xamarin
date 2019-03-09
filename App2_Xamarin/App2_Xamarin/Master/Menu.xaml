@@ -9,7 +9,7 @@
                 <StackLayout BackgroundColor="#FFC926" Padding="50">
                     <Image Source="logo" HorizontalOptions="Center" VerticalOptions="Center"></Image>
                 </StackLayout>
-                <StackLayout Spacing="50">
+                <StackLayout Spacing="20">
                     <Button Text="Miguel de Icaza" FontSize="28" TextColor="white" BackgroundColor="Transparent" Clicked="GoPagPerfil1"></Button>
                     <Button Text="Joseph Hill" FontSize="28" TextColor="white" BackgroundColor="Transparent"></Button>
                     <Button Text="Nat Friedman" FontSize="28" TextColor="white" BackgroundColor="Transparent"></Button>
